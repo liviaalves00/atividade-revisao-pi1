@@ -7,7 +7,7 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="container">
+  <body>
     <main class="container">
       <!-- 1QUESTAO-->
       <div id="containerError" class="oculto">
@@ -25,10 +25,84 @@
       </div>
       <!-- 3QUESTAO-->
       <div>
-        <label for="calcularEngajamento">Calcular Engajamento:</label>
-        <input type="text" id="engajamento" />
-        <button id="botaoEngajamento">Exibir</button>
-        <div id="conteudo"></div>
+        <label for="interacoes">Número de Interações:</label>
+        <input type="number" id="interacoes" />
+        <label for="visualizacoes">Número de Visualizações:</label>
+        <input type="number" id="visualizacoes" />
+        <button id="botaoCalcular">Calcular</button>
+        <div id="resultado"></div>
+      </div>
+      <!-- 4QUESTAO-->
+      <div>
+        <input type="file" accept="image/*" id="uploadImage" />
+        <img id="resultadoImg" class="img" />
+        <button id="botaoUpload">Upload</button>
+      </div>
+      <!-- 5QUESTAO-->
+      <div>
+        <select id="selectImg">
+          <option value="./assets/gameMaker.png">GameMaker</option>
+          <option value="./assets/geraldo.png">Geraldo</option>
+          <option value="./assets/ibere.png">Ibere</option>
+          <option value="./assets/patrocinio.png">Patro</option>
+        </select>
+        <img id="selectImgResult" class="img" />
+      </div>
+
+      <div>
+        <div>
+          <input
+            type="checkbox"
+            id="facebook"
+            name="redesSociais"
+            value="Facebook"
+          />
+          <label for="facebook">Facebook</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="twitter"
+            name="redesSociais"
+            value="Twitter"
+          />
+          <label for="twitter">Twitter</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="instagram"
+            name="redesSociais"
+            value="Instagram"
+          />
+          <label for="instagram">Instagram</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="linkedin"
+            name="redesSociais"
+            value="LinkedIn"
+          />
+          <label for="linkedin">LinkedIn</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="tiktok"
+            name="redesSociais"
+            value="TikTok"
+          />
+          <label for="tiktok">TikTok</label>
+        </div>
+        <div id="redesSelecionadas"></div>
+        <button type="button" id="redesSociaisBtn">Enviar Seleção</button>
+      </div>
+      <div>
+        <input type="text" id="hashtagInput" />
+        <button type="button" id="hashtagBtn">Adicionar Hashtag</button>
+        <select id="hashtags" size="5"></select>
+        <button type="button" id="hashtagRemover">Remover Hashtag</button>
       </div>
     </main>
   </body>
